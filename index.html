@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#351508">
+
+<title>دیزی کشوری | طعم اصیل دیزی ایرانی</title>
+
+<meta name="description" content="دیزی کشوری؛ تجربه طعم اصیل دیزی ایرانی، دیزی کلاسیک، دارچینی و زعفرانی.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --gold: #e8b65c;
+  --cream: #fff0d1;
+  --brown: #351508;
+  --dark: #1b0b05;
+  --orange: #a84c19;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  background:
+    linear-gradient(rgba(35,13,5,.91),rgba(35,13,5,.96)),
+    url('images/background.jpg') center/cover fixed;
+  color: var(--cream);
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg,rgba(30,10,3,.35),rgba(30,10,3,.72)),
+    url('images/hero-dizi.jpg') center/cover;
+}
+
+.hero-content {
+  padding: 65px 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  font-weight: 900;
+  color: #ffe0a0;
+  text-shadow: 0 5px 20px #000;
+}
+
+.hero h2 {
+  font-size: clamp(17px, 3vw, 25px);
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.hero-line {
+  width: 130px;
+  height: 3px;
+  background: var(--gold);
+  margin: 25px auto;
+  border-radius: 10px;
+}
+
+.hero p {
+  color: #f4d8ac;
+  font-size: 15px;
+}
+
+/* SECTION */
+
+.section {
+  padding: 55px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  color: var(--gold);
+  font-size: 29px;
+  font-weight: 900;
+}
+
+.section-title p {
+  margin-top: 10px;
+  color: #d7b998;
+  font-size: 14px;
+}
+
+/* FOOD CARDS */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.food-card {
+  background: linear-gradient(145deg,#54260f,#210c04);
+  border: 1px solid #b9823f;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,.4);
+  transition: .3s;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(232,182,92,.18);
+}
+
+.food-card img {
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  display: block;
+}
+
+.food-info {
+  text-align: center;
+  padding: 22px 12px 25px;
+}
+
+.food-info h3 {
+  color: #ffd17c;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.food-info p {
+  color: #ead7bd;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* CONTACT */
+
+.contact {
+  text-align: center;
+  padding: 45px 20px;
+  margin: 20px auto 55px;
+  border: 1px solid #98642f;
+  border-radius: 25px;
+  background: linear-gradient(135deg,#4c200d,#230c04);
+}
+
+.contact h2 {
+  color: var(--gold);
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #e8d3b8;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 800;
+  transition: .3s;
+  min-width: 200px;
+}
+
+.btn-call {
+  color: white;
+  background: linear-gradient(135deg,#218c28,#075516);
+  border: 1px solid #7bd66c;
+}
+
+.btn-map {
+  color: #fff2d2;
+  background: linear-gradient(135deg,#d98519,#963c08);
+  border: 1px solid #ffca70;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+  filter: brightness(1.15);
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  border-top: 1px solid #70401e;
+  color: #d9b477;
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+  .hero {
+    min-height: 440px;
+    background-position: 45% center;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 430px;
+    margin: auto;
+  }
+
+  .food-card img {
+    height: 260px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-title h2 {
+    font-size: 25px;
+  }
+
+  .contact {
+    padding: 35px 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">🍲 رستوران سنتی ایرانی</div>
+    <h1>دیزی کشوری</h1>
+    <div class="hero-line"></div>
+    <h2>طعم اصیل و ماندگار دیزی ایرانی</h2>
+    <p>با عطر نان تازه و طعم خاطره‌انگیز غذای سنتی</p>
+  </div>
+</header>
+
+<main>
+
+<!-- MENU -->
+<section class="section container">
+
+  <div class="section-title">
+    <h2>منوی غذاهای ما</h2>
+    <p>با عشق آماده شده، برای لذت بردن شما</p>
+  </div>
+
+  <div class="food-grid">
+
+    <!-- CLASSIC -->
+    <article class="food-card">
+      <img src="images/classic.jpg"
+           alt="دیزی کلاسیک"
+           loading="lazy">
+
+      <div class="food-info">
+        <h3>دیزی کلاسیک</h3>
+        <p>طعم اصیل و سنتی دیزی ایرانی</p>
+      </div>
+    </article>
+
+    <!-- CINNAMON -->
+    <article class="food-card">
+      <img src="images/cinnamon.jpg"
+           alt="دیزی دارچینی"
+           loading="lazy">
+
+      <div class="food-info">
+        <h3>دیزی دارچینی</h3>
+        <p>عطر دلنشین دارچین در یک غذای سنتی</p>
+      </div>
+    </article>
+
+    <!-- SAFFRON -->
+    <article class="food-card">
+      <img src="images/saffron.jpg"
+           alt="دیزی زعفرانی"
+           loading="lazy">
+
+      <div class="food-info">
+        <h3>دیزی زعفرانی</h3>
+        <p>عطر و رنگ زعفران در طعمی متفاوت</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="container">
+  <div class="contact">
+
+    <h2>منتظر دیدار شما هستیم ❤️</h2>
+
+    <p>
+      برای سفارش و هماهنگی با ما تماس بگیرید
+      یا مسیر رسیدن به رستوران را مشاهده کنید.
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn btn-call"
+         href="tel:09132019516">
+        ☎ تماس با رستوران
+      </a>
+
+      <a class="btn btn-map"
+         href="https://nshn.ir/QbZ9SkGxwGPk"
+         target="_blank"
+         rel="noopener">
+        📍 مشاهده آدرس روی نقشه
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>دیزی کشوری</strong>
+  <p style="margin-top:10px">
+    طعم اصیل ایرانی، با عشق و کیفیت
+  </p>
+  <p style="margin-top:10px">
+    © تمامی حقوق محفوظ است
+  </p>
+</footer>
+
+</body>
+</html>
